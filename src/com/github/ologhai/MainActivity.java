@@ -1,15 +1,21 @@
 package com.github.ologhai;
 
+import com.github.ologhai.OlogHaiView;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.FrameLayout;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements SurfaceHolder.Callback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        FrameLayout layout = new FrameLayout(this);
+        olog_hai_view_ = new OlogHaiView(this);
+        layout.addView(olog_hai_view_);
+        setContentView(layout);
     }
 
 
@@ -19,5 +25,6 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
+
+    private OlogHaiView olog_hai_view_;
 }
