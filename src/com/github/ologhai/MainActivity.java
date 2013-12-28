@@ -7,7 +7,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.widget.FrameLayout;
 
-public class MainActivity extends Activity implements SurfaceHolder.Callback {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

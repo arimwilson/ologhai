@@ -27,7 +27,7 @@ public class OlogHaiRunnable implements Runnable {
 				Canvas canvas= holder.lockCanvas();
 				if (canvas == null) continue;
 				
-				canvas.drawARGB(255, 255, 255, 255);
+				canvas.drawARGB(255, 255, 0, 255);
 				canvas.drawCircle(canvas.getWidth()/2, canvas.getHeight()/2, 20, circlePaint);
 			}
 			
